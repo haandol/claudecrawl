@@ -1,1 +1,8 @@
-jupyterlab
+requests
+rich
+langchain
+langchain-aws
+python-dotenv
+arize-phoenix-otel
+openinference-instrumentation-langchain
+
