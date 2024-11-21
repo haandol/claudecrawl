@@ -4,7 +4,8 @@ import requests
 from bs4 import BeautifulSoup as Soup
 from pydantic import BaseModel
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_aws.chat_models import ChatBedrockConverse
+from langchain_core.language_models import BaseChatModel
+
 
 from .logger import get_logger
 from .prompt import SYSTEM_PROMPT, USER_PROMPT
@@ -13,7 +14,7 @@ logger = get_logger("crawler")
 
 
 class ClaudeCrawler:
-    def __init__(self, model: ChatBedrockConverse, output_schema: Type[BaseModel]):
+    def __init__(self, model: BaseChatModel, output_schema: Type[BaseModel]):
         self.model = model.with_structured_output(output_schema)
         self.system_prompt = SYSTEM_PROMPT
         self.user_prompt = USER_PROMPT
