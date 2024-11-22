@@ -2,6 +2,8 @@ requests
 rich
 langchain
 langchain-aws
+langchain-anthropic
+langchain-ollama
 python-dotenv
 arize-phoenix-otel
 openinference-instrumentation-langchain
