@@ -1,6 +1,11 @@
 # Claude Web Scraper
 
-A web content scraper utilizing Claude LLM (Language Learning Model) through AWS Bedrock to intelligently extract and structure data from web pages. Currently optimized for extracting League of Legends champion tactics articles.
+A web content scraper utilizing Claude LLM (Language Learning Model)
+through AWS Bedrock to intelligently extract and structure data from web pages.
+
+Currently optimized for extracting League of Legends champion tactics articles.
+
+![Simple Overview](/docs/simple-overview.png)
 
 ## Features
 
@@ -26,13 +31,13 @@ git clone https://github.com/haandol/claude-web-scraper.git
 cd claude-web-scraper
 ```
 
-2. Install dependencies:
+1. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Configure environment variables:
+1. Configure environment variables:
    Create a `.env` file in the project root with:
 
 ```env
