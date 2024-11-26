@@ -127,8 +127,9 @@ class PlayWrightScraper(Scraper):
             page = context.new_page()
             page.route("**/*", self._intercept_route)
             page.goto(url)
+            content = page.content()
             browser.close()
-            return page.content()
+            return content
 
     def scrape(self, url: str) -> str:
         """웹 페이지를 스크래핑한다."""
