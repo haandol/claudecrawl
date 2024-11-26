@@ -1,7 +1,9 @@
 # Claude Web Scraper
 
-A web content scraper utilizing Claude LLM (Language Learning Model)
-through AWS Bedrock to intelligently extract and structure data from web pages.
+A web content scraper utilizing
+[Playwright](https://playwright.dev) and [Claude LLM](https://claude.ai)
+through [AWS Bedrock](https://aws.amazon.com/bedrock/)
+to intelligently extract and structure data from web pages.
 
 Currently optimized for extracting League of Legends champion tactics articles.
 
@@ -35,6 +37,12 @@ cd claude-web-scraper
 
 ```bash
 pip install -r requirements.txt
+```
+
+1. Install Playwright dependencies:
+
+```bash
+playwright install
 ```
 
 1. Configure environment variables:

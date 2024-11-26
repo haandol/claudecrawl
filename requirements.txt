@@ -6,5 +6,6 @@ langchain-anthropic
 langchain-ollama
 python-dotenv
 arize-phoenix-otel
+playwright
 openinference-instrumentation-langchain
 

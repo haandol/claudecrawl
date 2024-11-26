@@ -11,6 +11,7 @@ from pydantic import BaseModel, Field
 
 from src.logger import get_logger
 from src.llm import BedrockLLM
+from src.scraper import PlayWrightScraper
 from src.crawler import ClaudeCrawler
 
 
@@ -60,7 +61,8 @@ def main(url: str, instruction: str, output_schema: Type[BaseModel]):
         aws_profile_name=AWS_PROFILE_NAME,
         aws_region=AWS_REGION,
     )
-    crawler = ClaudeCrawler(llm.model, output_schema)
+    scraper = PlayWrightScraper()
+    crawler = ClaudeCrawler(scraper, llm.model, output_schema)
     return crawler.crawl(url, instruction)
 
 
