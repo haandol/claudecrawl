@@ -30,7 +30,7 @@ class ClaudeCrawler:
         return self.model.invoke(prompt_value)
 
     def crawl(self, url: str, instruction: str):
-        logger.info(f"scrape url: {url}...")
+        logger.info(f"crawl url: {url}...")
 
         html_content = self.scraper.scrape(url)
         return self.extract(instruction, html_content)

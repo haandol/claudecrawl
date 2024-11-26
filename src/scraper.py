@@ -122,11 +122,12 @@ class PlayWrightScraper(Scraper):
         """페이지의 HTML을 가져온다."""
         logger.info(f"fetch url: {url}")
         with sync_playwright() as p:
-            browser = p.chromium.launch()
+            browser = p.chromium.launch(headless=True)
             context = browser.new_context()
             page = context.new_page()
             page.route("**/*", self._intercept_route)
             page.goto(url)
+            browser.close()
             return page.content()
 
     def scrape(self, url: str) -> str:
