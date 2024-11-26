@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+from fake_useragent import UserAgent
 from playwright.sync_api import Route
 from bs4 import BeautifulSoup as Soup
 from playwright.sync_api import sync_playwright
@@ -20,6 +21,8 @@ class PlayWrightScraper(Scraper):
 
     def __init__(self):
         super().__init__()
+
+        self.user_agent = UserAgent()
 
         # 차단할 리소스 타입 정의
         self.block_resource_types = [
@@ -123,7 +126,7 @@ class PlayWrightScraper(Scraper):
         logger.info(f"fetch url: {url}")
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
-            context = browser.new_context()
+            context = browser.new_context(user_agent=self.user_agent.random)
             page = context.new_page()
             page.route("**/*", self._intercept_route)
             page.goto(url)

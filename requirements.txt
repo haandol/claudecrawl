@@ -7,5 +7,6 @@ langchain-ollama
 python-dotenv
 arize-phoenix-otel
 playwright
+fake-useragent
 openinference-instrumentation-langchain
 
