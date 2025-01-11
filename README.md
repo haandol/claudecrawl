@@ -1,4 +1,4 @@
-# Claude Web Scraper
+# ClaudeCrawl
 
 A web content scraper utilizing
 [Playwright](https://playwright.dev) and [Claude LLM](https://claude.ai)
