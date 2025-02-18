@@ -65,7 +65,7 @@ AWS_REGION=your_aws_region
 1. Run the scraper:
 
 ```bash
-python app.py
+uv run -- python app.py
 ```
 
 The script will:
