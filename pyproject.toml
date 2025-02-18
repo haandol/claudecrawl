@@ -1,6 +1,20 @@
-[tool.ruff]
-line-length = 120
-indent-width = 4
-
-[tool.ruff.lint]
-ignore = ["E402"]
+[project]
+name = "claudecrawl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "arize-phoenix-otel>=0.7.1",
+    "bs4>=0.0.2",
+    "fake-useragent>=2.0.3",
+    "langchain>=0.3.19",
+    "langchain-anthropic>=0.3.7",
+    "langchain-aws>=0.2.12",
+    "langchain-ollama>=0.2.3",
+    "openinference-instrumentation-langchain>=0.1.32",
+    "playwright>=1.50.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+    "rich>=13.9.4",
+]

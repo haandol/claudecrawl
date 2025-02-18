@@ -5,8 +5,6 @@ A web content scraper utilizing
 through [AWS Bedrock](https://aws.amazon.com/bedrock/)
 to intelligently extract and structure data from web pages.
 
-Currently optimized for extracting League of Legends champion tactics articles.
-
 ![Simple Overview](/docs/simple-overview.png)
 
 ## Features
@@ -20,7 +18,7 @@ Currently optimized for extracting League of Legends champion tactics articles.
 ## Prerequisites
 
 - Docker
-- Python 3.12+
+- Python 3.13+
 - AWS Account with Bedrock access
 - AWS CLI configured
 
@@ -33,16 +31,22 @@ git clone https://github.com/haandol/claude-web-scraper.git
 cd claude-web-scraper
 ```
 
-1. Install dependencies:
+1. Install `uv`:
 
 ```bash
-pip install -r requirements.txt
+pip install uv
+```
+
+1. Install dependencies
+
+```bash
+uv sync
 ```
 
 1. Install Playwright dependencies:
 
 ```bash
-playwright install
+uv run playwright install
 ```
 
 1. Configure environment variables:
@@ -72,4 +76,4 @@ The script will:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details.
+This project is licensed under the Apache 2.0 License - see the [LICENSE](/LICENSE) file for details.
